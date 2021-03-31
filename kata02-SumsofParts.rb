@@ -12,7 +12,7 @@ end
 def parts_sums(ls)
   sums = []
   ls.each_with_index { |value, i|
-    sums << value =+ ls.slice(i..-1).sum
+    sums << ls.slice(i..-1).sum
   }
-  sums.insert(-1, 0)
+  sums.push(0)
 end
